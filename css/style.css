@@ -1,0 +1,498 @@
+/* ===========================
+   GLOBAL FONT SETUP
+=========================== */
+@font-face {
+  font-family: 'StarJedi';
+  src: url('../fonts/Starjedi.ttf') format('truetype');
+  font-display: swap;
+}
+
+/* ===========================
+   BASE / BODY
+=========================== */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  letter-spacing: 0.03em;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle at top, #000000, #050505 60%, #0a0a0a 100%);
+  background-attachment: fixed;
+  color: #fce96b;
+  text-align: center;
+  min-height: 100vh;
+}
+
+a {
+  color: #ffe81f;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* Make all normal images centered */
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===========================
+   MAIN WRAPPER
+=========================== */
+main {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 3em;
+  margin: 3em auto;
+  width: 85%;
+  max-width: 80em;
+  border-radius: 2em;
+  box-shadow: 0 0 3em rgba(255, 232, 31, 0.3);
+}
+
+main p {
+  color: #dddddd;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+header {
+  background: linear-gradient(180deg, #000000, #111111);
+  border-bottom: 0.2em solid #ffe81f;
+  padding: 2em 0 1em 0;
+  box-shadow: 0 0 3em rgba(255, 232, 31, 0.25);
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'StarJedi', sans-serif;
+  font-size: 2.4em;
+  letter-spacing: 0.12em;
+  color: #ffe81f;
+  text-shadow: 0 0 0.6em #ffe81f;
+}
+
+/* ===========================
+   NAVIGATION (NO FLEX)
+=========================== */
+nav {
+  width: 100%;
+  margin-top: 1em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0.7em 1.5em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffe81f;
+  font-weight: 600;
+  padding: 0.4em 0.2em;
+  font-size: 1.1rem;
+  text-shadow: 0 0 0.3em rgba(255, 232, 31, 0.7);
+  transition: 0.2s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 0.7em #ffe81f;
+}
+
+/* ===========================
+   GENERIC SECTIONS
+=========================== */
+.section {
+  width: 90%;
+  max-width: 70em;
+  margin: 0 auto 3em;
+  padding: 3em;
+  border-radius: 1.5em;
+  border: 0.15em solid #ffe81f;
+  text-align: center;
+  box-shadow: 0 0 2em rgba(255, 232, 31, 0.4);
+}
+
+.section > * {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section p {
+  color: #dddddd;
+  text-align: left;
+}
+
+/* SECTION THEMES */
+.jedi-section {
+  background: rgba(10, 10, 30, 0.95);
+  border-color: #1e90ff;
+  box-shadow: 0 0 2em #1e90ff77;
+}
+
+.force-section {
+  background: rgba(20, 10, 30, 0.95);
+  border-color: #9b59b6;
+  box-shadow: 0 0 2em #9b59b677;
+}
+
+.characters-section {
+  background: rgba(6, 20, 10, 0.95);
+  border-color: #2ecc71;
+  box-shadow: 0 0 2em #2ecc7177;
+}
+
+.ships-section {
+  background: rgba(6, 10, 18, 0.95);
+  border-color: #3498db;
+  box-shadow: 0 0 2em #3498db77;
+}
+
+.planets-section {
+  background: rgba(8, 12, 6, 0.95);
+  border-color: #e67e22;
+  box-shadow: 0 0 2em #e67e2277;
+}
+
+.sith-section {
+  background: rgba(18, 6, 6, 0.95);
+  border-color: #b30000;
+  box-shadow: 0 0 2em #b3000077;
+}
+
+.alien-section {
+  background: rgba(16, 8, 18, 0.95);
+  border-color: #9b59b6;
+  box-shadow: 0 0 2em #9b59b677;
+}
+
+/* Images inside sections: consistent size */
+.section img {
+  width: 80%;
+  max-width: 25em;
+  border-radius: 1em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+/* ===========================
+   CARD GRID (NO FLEX)
+=========================== */
+.card,
+.movie-card,
+.character-card,
+.ship-card,
+.planet-card,
+.alien-card {
+  display: inline-block;
+  width: 28%;
+  margin: 1.2em 1%;
+  padding: 1.2em;
+  border-radius: 0.8em;
+  background: rgba(0, 0, 0, 0.55);
+  border: 0.08em solid rgba(255, 255, 255, 0.25);
+  vertical-align: top;
+  box-shadow: 0 0 1.2em rgba(0, 0, 0, 0.6);
+}
+
+.card h3,
+.movie-card h3,
+.character-card h3,
+.ship-card h3,
+.planet-card h3,
+.alien-card h3 {
+  font-family: 'StarJedi', sans-serif;
+  letter-spacing: 0.08em;
+  font-size: 1.2em;
+  margin-bottom: 0.7em;
+}
+
+.card p,
+.movie-card p,
+.character-card p,
+.ship-card p,
+.planet-card p,
+.alien-card p {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+/* ===========================
+   TABLES
+=========================== */
+.public-table,
+.admin-table {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 95%;
+  max-width: 65em;
+  border-collapse: collapse;
+}
+
+.public-table th,
+.public-table td,
+.admin-table th,
+.admin-table td {
+  border: 0.08em solid rgba(255, 232, 31, 0.4);
+  padding: 0.7em 0.4em;
+  text-align: center;
+}
+
+.public-table th,
+.admin-table th {
+  background: rgba(20, 20, 20, 0.95);
+  color: #ffe81f;
+  font-weight: 700;
+}
+
+.public-table tr:nth-child(even),
+.admin-table tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* ===========================
+   LOGIN FORM
+=========================== */
+.login-form {
+  max-width: 35em;
+  margin: 4em auto;
+  padding: 3em;
+  background: rgba(10, 10, 10, 0.96);
+  border-radius: 1em;
+  box-shadow: 0 0 3em rgba(255, 232, 31, 0.35);
+  text-align: left;
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.login-form label {
+  display: block;
+  color: #ffe81f;
+  margin-bottom: 0.6em;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1.8em;
+  border-radius: 0.5em;
+  border: 0.08em solid #444444;
+  background: #111111;
+  color: #ffe81f;
+}
+
+.login-form input:focus {
+  outline: 0.15em solid #ffe81f;
+  box-shadow: 0 0 1em #ffe81f;
+}
+
+.login-form button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.9em 3em;
+  border: none;
+  background: #ffe81f;
+  color: #000000;
+  border-radius: 0.6em;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* ===========================
+   ADMIN DASHBOARD & LINKS
+=========================== */
+.dashboard-page {
+  background: radial-gradient(circle at top, #000000, #050505 60%, #0a0a0a 100%);
+  color: #fce96b;
+}
+
+.admin-links {
+  text-align: center;
+  margin-top: 2.5em;
+}
+
+.admin-links a {
+  display: inline-block;
+  margin: 1em 1.5em;
+  text-decoration: none;
+  color: #ffe81f;
+  font-size: 1.05rem;
+  padding: 0.8em 2.4em;
+  border: 0.15em solid #ffe81f;
+  border-radius: 1.5em;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 0 1.5em rgba(255, 232, 31, 0.35);
+  font-weight: 600;
+}
+
+.admin-links a:hover {
+  background: #ffe81f;
+  color: #000000;
+  box-shadow: 0 0 2.2em #ffe81f;
+}
+
+/* Single logout button style (if used separately) */
+.logout-btn {
+  margin-top: 2em;
+  padding: 0.9em 2.6em;
+  font-size: 1.05rem;
+  background: #ffe81f;
+  color: #000000;
+  border: none;
+  border-radius: 1.4em;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* ===========================
+   ADMIN FORM (ADD / EDIT)
+=========================== */
+.admin-form {
+  width: 60%;
+  max-width: 50em;
+  margin: 2.5em auto;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 2.5em;
+  border-radius: 1.2em;
+  box-shadow: 0 0 2em rgba(255, 232, 31, 0.35);
+  text-align: left;
+}
+
+.admin-form label {
+  margin-top: 1em;
+  display: block;
+  font-weight: 600;
+  color: #ffe81f;
+}
+
+.admin-form input,
+.admin-form textarea {
+  width: 100%;
+  margin-top: 0.5em;
+  padding: 0.9em;
+  background: #111111;
+  border: 0.08em solid #555555;
+  border-radius: 0.6em;
+  color: #ffe81f;
+  font-size: 0.95rem;
+}
+
+.admin-submit-btn {
+  margin-top: 2em;
+  padding: 1em 2.5em;
+  background: #ffe81f;
+  color: #000000;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* ===========================
+   CAROUSEL (NO FLEX / NO PX)
+=========================== */
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 40em;
+  margin: 3em auto;
+  overflow: hidden;
+  border-radius: 1em;
+  box-shadow: 0 0 2em rgba(255, 230, 30, 0.25);
+}
+
+.carousel .slides {
+  white-space: nowrap;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 1em;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: #ffe81f;
+  background: rgba(0, 0, 0, 0.55);
+  border: none;
+  padding: 0.4em 0.8em;
+  cursor: pointer;
+  border-radius: 0.4em;
+}
+
+.carousel .prev {
+  left: 1em;
+}
+
+.carousel .next {
+  right: 1em;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  margin: 2em auto;
+  color: #aaaaaa;
+  font-size: 0.85rem;
+}
+
+/* ===========================
+   RESPONSIVE FIXES
+=========================== */
+@media (max-width: 60em) {
+  main {
+    width: 95%;
+    padding: 2em;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0.5em auto;
+  }
+
+  .card,
+  .movie-card,
+  .character-card,
+  .ship-card,
+  .planet-card,
+  .alien-card {
+    width: 90%;
+  }
+
+  .admin-form {
+    width: 90%;
+  }
+
+  .admin-links a {
+    display: block;
+    margin: 1em auto;
+    width: 70%;
+  }
+
+  .carousel {
+    width: 95%;
+  }
+}
